@@ -1,0 +1,28 @@
+table, th, td
+{
+	border:2px solid black;
+	border-collapse: collapse;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+}
+th
+{
+	width:150px;
+	background-color: rgb(236, 236, 236);
+	font-size: 1.2em;
+	padding: 5px;
+}
+td
+{
+	background-color: antiquewhite;
+	font-size: 1.1em;
+	padding: 3px;
+}
+body
+{
+	background-image:url("fetch_bg.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+}
+        

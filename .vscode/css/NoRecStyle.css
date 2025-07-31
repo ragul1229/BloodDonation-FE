@@ -1,0 +1,25 @@
+body 
+{
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
+    background-color: rgb(208, 231, 251);
+}
+
+.imageDiv 
+{
+    background-color: rgb(159, 214, 214);
+    width: 50%;
+    padding: 40px;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+a 
+{
+    text-decoration: none;
+    color: midnightblue;
+    cursor: pointer;
+    font-size: 1.2em;
+}

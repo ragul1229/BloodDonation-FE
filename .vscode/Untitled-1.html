@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <title>Registration page</title>
+</head>
+<link rel="stylesheet" href="RegStyle.css">
+<script src="RegScript.js"></script>
+
+<body>
+    <table width=100%>
+        <h1 align="center">
+            <font color="purple">REGISTRATION FORM </font>
+        </h1>
+        <tr height="30px">
+            <td></td>
+            <td width="37%" rowspan="4" id="form_cell">
+                <form name="RegistrationForm" method="POST" action="Register.php">
+                    <table align="center" id="subTable">
+
+                        <tr>
+                            <td>
+                                <font color="purple"><b> Name</b></font>
+                            </td>
+                            <td> <input type="text" name="name" required> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b> Phone Number </b></font>
+                            </td>
+                            <td> <input type="text" name="mobile" id="mobile" maxlength="10" required> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b> Gender </b></font>
+                            </td>
+                            <td>
+                                <input type="radio" name="gender" value="male">Male
+                                <input type="radio" name="gender" value="female">Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b> Age </b></font>
+                            </td>
+                            <td>
+                                <select name="age_grp" required>
+                                    <option value="18-30">18-30 years</option>
+                                    <option value="30-40">30-40 years</option>
+                                    <option value="40-50">40-50 years</option>
+                                    <option value="50-60">50-60 years</option>
+                                    <option value="60+">above 60 years</option>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b>Blood Group </b></font>
+                            </td>
+                            <td>
+                                <select name="blood_grp" required>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="A1+">A1+</option>
+                                    <option value="A1-">A1-</option>
+                                    <option value="A2+">A2+</option>
+                                    <option value="A2-">A2-</option>
+                                    <option value="A1B+">A1B+</option>
+                                    <option value="A1B-">A1B-</option>
+                                    <option value="A2B+">A2B+</option>
+                                    <option value="A2B-">A2B-</option>
+                                    <option value="BBG">Bombay blood group</option>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b> State </b></font>
+                            </td>
+                            <td>
+                                <select name="state" id="state" onchange="SttoDis(this.id,'district')" required>
+                                    <optgroup>
+                                        <option value="">Select the State</option>
+                                        <option value="Andhra Pradesh"> Andhra Pradesh </option>
+                                        <option value="Others"> Others </option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b>District</b></font>
+                            </td>
+                            <td><select name="district" id="district" onchange="DistoDiv(this.id,'division')">
+                                    <optgroup>
+                                        <option value=""> Please select State first </option>
+                                    </optgroup>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b>Divisions </b></font>
+                            </td>
+                            <td>
+                                <select name="division" id="division" onchange="DivtoMan(this.id,'mandal')">
+                                    <optgroup>
+                                        <option value=""> Please select District first </option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font color="purple"><b>Mandals </b></font>
+                            </td>
+                            <td>
+                                <select name="mandal" id="mandal">
+                                    <optgroup>
+                                        <option value=""> Please select Division first </option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr></tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="Register" value="Register" onclick="Validate()">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="33%"><img src="b28.jpg" width="500" height="400"></td>
+            <td>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <h2>
+                                <font color="purple"><i>"Donate blood for a reason</font></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <h2>
+                                <font color="purple"><i>let the reason be life</font></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <h2>
+                                <font color="purple"><i>of someone "</font></i>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr height="30px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+    <marquee>
+        <p><i>
+                <h1>
+                    <font color="purple">If you are above 18 years please donate blood...</font>
+                </h1>
+            </i></p>
+    </marquee>
+</body>
+
+</html>
