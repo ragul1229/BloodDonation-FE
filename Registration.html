@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+
+    <script src="RegScript.js"></script>
+
+    <style>
+        #subTable tr {
+            height: 40px;
+            padding: 5px;
+        }
+
+        #subTable {
+            margin: 32px;
+        }
+
+        select {
+            font-family: 'Cambria';
+            font-size: 15px;
+            border: 2px solid #555;
+            height: 30px;
+            width: 200px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        input[type=text] {
+            height: 30px;
+            width: 200px;
+            padding: 5px;
+            margin: 5px;
+            border: 2px solid #555;
+        }
+
+        input[type=submit] {
+            margin: 4px 2px;
+            border-radius: 5px;
+            background-color: #191970;
+            color: White;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-family: 'Roboto';
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid #555;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(200, 67, 90);
+            cursor: pointer;
+        }
+
+        #form_cell {
+            background-image: linear-gradient(to bottom right, Gainsboro, lightSalmon);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%">
+        <h1 align="center">
+            <font color="purple">REGISTRATION FORM </font>
+        </h1>
+        <tr height="30px">
+            <td></td>
+            <td width="37%" rowspan="4" id="form_cell">
+                <form name="RegistrationForm" method="POST" action="Register.php">
+                    <table align="center" id="subTable">
+                        <tr>
+                            <td><font color="purple"><b>Name</b></font></td>
+                            <td><input type="text" name="name" required></td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>Phone Number</b></font></td>
+                            <td><input type="text" name="mobile" id="mobile" maxlength="10" required></td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>Gender</b></font></td>
+                            <td>
+                                <input type="radio" name="gender" value="male">Male
+                                <input type="radio" name="gender" value="female">Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>Age</b></font></td>
+                            <td>
+                                <select name="age_grp" required>
+                                    <option value="18-30">18-30 years</option>
+                                    <option value="30-40">30-40 years</option>
+                                    <option value="40-50">40-50 years</option>
+                                    <option value="50-60">50-60 years</option>
+                                    <option value="60+">above 60 years</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>Blood Group</b></font></td>
+                            <td>
+                                <select name="blood_grp" required>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="A1+">A1+</option>
+                                    <option value="A1-">A1-</option>
+                                    <option value="A2+">A2+</option>
+                                    <option value="A2-">A2-</option>
+                                    <option value="A1B+">A1B+</option>
+                                    <option value="A1B-">A1B-</option>
+                                    <option value="A2B+">A2B+</option>
+                                    <option value="A2B-">A2B-</option>
+                                    <option value="BBG">Bombay blood group</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>State</b></font></td>
+                            <td>
+                                <select name="state" id="state" onchange="SttoDis(this.id,'district')" required>
+                                    <option>Tamil Nadu</option>
+                                    <option>Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>District</b></font></td>
+                            <td>
+                                <select name="district" id="district" onchange="DistoDiv(this.id,'division')">
+                                    <option>Coimbatore</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Tiruppur</option>
+                                    <option>Nilgiris</option>
+                                    <option>Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><font color="purple"><b>Divisions</b></font></td>
+                            <td>
+                                <select name="division" id="division" onchange="DivtoMan(this.id,'mandal')">
+                                    <optgroup>
+                                        <option>Sulur</option>
+                                        <option>Singanallur</option>
+                                        <option>Gandhipuram</option>
+                                        <option>Coimbatore North</option>
+                                        <option>Coimbatore South</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="Register" value="Register" onclick="Validate()">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="33%"><img src="images/b28.jpg" width="500" height="400"></td>
+            <td>
+                <table align="center">
+                    <tr><td><h2><font color="purple"><i>"Donate blood for a reason</i></font></h2></td></tr>
+                    <tr><td align="center"><h2><font color="purple"><i>let the reason be life</i></font></h2></td></tr>
+                    <tr><td align="center"><h2><font color="purple"><i>of someone"</i></font></h2></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr height="30px">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <marquee>
+        <p>
+            <h1><font color="purple"><i>If you are above 18 years please donate blood...</i></font></h1>
+        </p>
+    </marquee>
+</body>
+
+</html>

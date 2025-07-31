@@ -1,0 +1,22 @@
+body 
+{
+    background-color: midnightblue;
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    color: whitesmoke;
+}
+
+a 
+{
+    text-decoration: none;
+    color: rgb(255, 206, 200);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+img 
+{
+    width: 270px;
+    height: 250px;
+}

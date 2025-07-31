@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Page | Take a Stand</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    :root {
+      --bar-height: 72px;
+      --color-primary: Maroon;
+      --color-primary-light: darkSalmon;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Cambria";
+    }
+
+    .header {
+      height: 100vh;
+      background-image: url("images/bg2.jpg");
+      background-size: 1550px 650px;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      padding-top: var(--bar-height);
+      box-sizing: border-box;
+    }
+
+    .u-centered {
+      width: 100%;
+      max-width: 1300px;
+      margin-top: 3%;
+      padding: 16px;
+      box-sizing: border-box;
+      margin-right: 500px;
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
+
+    .v-centered {
+      width: 100%;
+      max-width: 1300px;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .sign-up {
+      max-width: 400px;
+      padding: 32px;
+      box-sizing: border-box;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+    }
+
+    .sign-up__title {
+      margin-top: 0;
+    }
+
+    .sign-up__description {
+      font-size: 1.2em;
+    }
+
+    .sign-up__button {
+      background: #ffffff;
+      outline: none;
+      font: bold 1.1em "Quicksand", sans-serif;
+      color: var(--color-primary);
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .sign-up__button:hover {
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .top-bar {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--bar-height);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      transition: background 0.15s;
+    }
+
+    .top-bar__bg {
+      background: linear-gradient(to left, #bb0d41, #6f0000);
+    }
+
+    .top-bar__content {
+      height: 100%;
+      padding: 5px;
+    }
+
+    .top-bar__logo {
+      height: 100%;
+      float: left;
+    }
+
+    .main-title {
+      text-align: center;
+      height: 100%;
+      margin: 5px;
+      padding: 5px;
+      color: WhiteSmoke;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="u-centered">
+      <div class="sign-up">
+        <h1 class="sign-up__title">Register</h1>
+        <p class="sign-up__description">
+          Register , donate and save lives...
+        </p>
+        <a href="Registration.html">
+          <button class="sign-up__button" type="button">Register</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="v-centered">
+      <div class="sign-up">
+        <h1 class="sign-up__title">Find Donor</h1>
+        <p class="sign-up__description">
+          Find the donors...
+        </p>
+        <a href="FindDonor.html">
+          <button class="sign-up__button" type="button">Find Donor</button>
+        </a>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>

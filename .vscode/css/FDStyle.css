@@ -1,0 +1,70 @@
+/*Style sheet for FindDonor.html and FindDonor1.html*/
+body
+{
+	margin: 2% 13%;
+	padding: 20px 10px;
+	border: 10px solid transparent;
+	border-image: linear-gradient(to top left, MidnightBlue, Salmon);
+	border-image-slice: 1;
+}
+h1
+{
+	font-size: 40px;
+	font-family: 'Times New Roman';
+	color: DarkBlue;
+	text-align: center;
+}
+td
+{
+	width: 40%;
+}
+.Container
+{
+	background-image: linear-gradient(to bottom right, Gainsboro, LightSalmon);
+	padding: 30px;
+	margin: auto;
+	width: 60%;
+}
+.groups
+{
+	padding: 10px;
+	margin: 10px;
+}
+.groups label
+{
+	display: inline-block;
+	font-family: 'Cambria';
+	font-size: 23px;
+}
+select
+{
+	font-family: 'Cambria';
+	font-size: 20px;
+	border: 1px solid #555;
+	height: 50px;
+	width: 300px;
+	padding: 5px;
+	margin: 10px;
+}
+optgroup
+{
+	font-family: 'Cambria';
+	font-size: 18px;
+}
+input[type=submit]
+{
+	background-color: #191970;
+	border: 2px solid #000000;
+	color: White;
+	padding: 16px 32px;
+	font-size: 18px;
+	font-family: 'Cambria';
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+input[type=submit]:hover 
+{
+	background-color: rgb(200, 67, 90);
+	cursor: pointer;
+}

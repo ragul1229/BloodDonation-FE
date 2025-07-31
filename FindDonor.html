@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find a Donor - Blood Donation Site</title>
+  <style>
+    body {
+      margin: 2% 10%;
+      font-family: Cambria, serif;
+      background: linear-gradient(to bottom right, #f5f5f5, #ffe4e1);
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      color: darkred;
+      font-size: 40px;
+    }
+
+    table {
+      background-color: white;
+      margin: auto;
+      padding: 30px;
+      width: 60%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    td {
+      padding: 12px;
+    }
+
+    label {
+      font-size: 20px;
+    }
+
+    select, input[type="submit"] {
+      width: 100%;
+      font-size: 18px;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #555;
+    }
+
+    input[type="submit"] {
+      background-color: darkred;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #c14444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Find a Donor</h1>
+  <form onsubmit="return validateForm();">
+    <table>
+      <tr>
+        <td><label for="blood_grp">Blood Group:</label></td>
+        <td>
+          <select id="blood_grp" required>
+            <option value="">Select</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="BBG">Bombay Blood Group</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="state">State:</label></td>
+        <td>
+          <select id="state" required>
+            <option value="">Select</option>
+            <option>Tamil Nadu</option>
+            <option>Others</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="district">District:</label></td>
+        <td>
+          <select id="district" required>
+            <option value="">Select</option>
+            <option>Coimbatore</option>
+            <option>Tiruppur</option>
+            <option>Others</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="division">Division:</label></td>
+        <td>
+          <select id="division">
+            <option value="">Select</option>
+            <option>Sulur</option>
+            <option>Singanallur</option>
+            <option>Coimbatore North</option>
+            <option>Coimbatore South</option>
+            <option>Others</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <br>
+          <input type="submit" value="Find Donor">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    function validateForm() {
+      const blood = document.getElementById("blood_grp").value;
+      const state = document.getElementById("state").value;
+      const district = document.getElementById("district").value;
+
+      if (!blood || !state || !district) {
+        alert("Please fill all required fields.");
+        return false;
+      }
+
+      alert("This is a demo. A list of donors would appear here.");
+      return false; // Prevent actual form submission (since no backend)
+    }
+  </script>
+
+</body>
+</html>
