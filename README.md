@@ -13,7 +13,8 @@ A responsive frontend for a blood donation system allowing users to request or d
 - JavaScript
 
 ## 📸 Screenshots
-> 
+> <img src="screenshots/blooddonar.png" width="600" alt="UI Screenshot" />
+
 
 ## 📈 Future Plans
 - Integrate backend APIs
